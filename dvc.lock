@@ -5,11 +5,12 @@ stages:
     deps:
     - path: stages/01_download.sh
       hash: md5
-      md5: ecbf84c4128d7034677e73bdf71780cf
-      size: 966
+      md5: 6b8250c6f0e206f6a44cb905624d79cf
+      size: 1650
+      isexec: true
     outs:
     - path: brick
       hash: md5
-      md5: 133824399d6cded41a63c7ffd15cd1ba.dir
-      size: 11409767392
-      nfiles: 52
+      md5: 587c86b115cea214cbc77022636cf6d9.dir
+      size: 19287758146
+      nfiles: 232
