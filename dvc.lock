@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: stages/01_download.sh
+    deps:
+    - path: stages/01_download.sh
+      hash: md5
+      md5: ecbf84c4128d7034677e73bdf71780cf
+      size: 966
+    outs:
+    - path: brick
+      hash: md5
+      md5: 133824399d6cded41a63c7ffd15cd1ba.dir
+      size: 11409767392
+      nfiles: 52
