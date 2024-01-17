@@ -9,9 +9,16 @@
 # dvc repro <stage>
 
 stages:
+  invalidate:
+    cmd: stages/00_invalidate.sh
+    deps:
+      - stages/00_invalidate.sh
+    outs:
+      - checksum
   download:
     cmd: stages/01_download.sh
     deps:
+      - checksum
       - stages/01_download.sh
     outs:
       - brick
