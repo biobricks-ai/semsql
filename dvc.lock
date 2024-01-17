@@ -3,14 +3,31 @@ stages:
   download:
     cmd: stages/01_download.sh
     deps:
+    - path: checksum
+      hash: md5
+      md5: b0e848cb86e138bbf6e04897d64cb7ed.dir
+      size: 35735
+      nfiles: 1
     - path: stages/01_download.sh
       hash: md5
       md5: 6b8250c6f0e206f6a44cb905624d79cf
       size: 1650
-      isexec: true
     outs:
     - path: brick
       hash: md5
-      md5: 587c86b115cea214cbc77022636cf6d9.dir
-      size: 19287758146
-      nfiles: 232
+      md5: 179453528e5dc4ebcb31390ec254426f.dir
+      size: 20342757451
+      nfiles: 244
+  invalidate:
+    cmd: stages/00_invalidate.sh
+    deps:
+    - path: stages/00_invalidate.sh
+      hash: md5
+      md5: 1cdabba315cdb62ec1e69ad3fdff121f
+      size: 360
+    outs:
+    - path: checksum
+      hash: md5
+      md5: b0e848cb86e138bbf6e04897d64cb7ed.dir
+      size: 35735
+      nfiles: 1
